@@ -13,8 +13,8 @@ Git is one of the most popular tools for version control system. you can pull co
 
 #### Setup Git on jenkins console
 - Install git plugin without restart  
-  - `Manage Jenkins` > `Jenkins Plugins` > `available` > `github`
+  - `Manage Jenkins` > `Manage Plugins` > `available` > `then search for "github"`
 
 - Configure git path
-  - `Manage Jenkins` > `Global Tool Configuration` > `git`
+  - `Manage Jenkins` > `Global Tool Configuration` > `git` > `and change NAME from default to github  and path from git to /usr/bin/git
 
