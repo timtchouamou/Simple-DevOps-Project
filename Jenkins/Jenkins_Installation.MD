@@ -18,19 +18,21 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. Confirm Java Version and set the java home
    ```sh
    java -version
-   find /usr/lib/jvm/java-1.8* | head -n 3
-   JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-<Java version which seen in the above output>
-   export JAVA_HOME
-   PATH=$PATH:$JAVA_HOME
-    # To set it permanently update your .bash_profile
-   vi ~/.bash_profile
+   find /usr/lib/jvm/java-1.8* | head -n 3   ## to get java version
+   vi ~/.bash_profile   ## to update the below permanently to you path
+   JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.amzn2.0.1.x86_64      <Java version which seen in the above output>
+   PATH=$PATH:$HOME/bin:$JAVA_HOME
+   
+   [root@jenkins ~]# source ~/.bash_profile
+   
+   
    ```
-   _The output should be something like this,_
-    ```sh
-   [root@~]# java -version
-   openjdk version "1.8.0_151"
-   OpenJDK Runtime Environment (build 1.8.0_151-b12)
-   OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
+   Verify java is installed well, The output should be something like below.
+   
+   [root@jenkins ~]# java -version
+   openjdk version "1.8.0_272"
+   openJDK Runtime Environment (build 1.8.0_272-b10)
+   openJDK 64-Bit Server VM (build 25.272-b10, mixed mode)
    ```
 
 ## Install Jenkins
@@ -43,20 +45,18 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    yum -y install jenkins
    ```
 
-   ### Start Jenkins
-   ```sh
-   # Start jenkins service
-   service jenkins start
+   ### Start Jenkins and Setup Jenkins to start at boot
+   ``` sh
+   # systemctl enable --now jenkins
 
-   # Setup Jenkins to start at boot,
-   chkconfig jenkins on
-   ```
 
    ### Accessing Jenkins
    By default jenkins runs at port `8080`, You can access jenkins at
    ```sh
    http://YOUR-SERVER-PUBLIC-IP:8080
    ```
+   
+   
   #### Configure Jenkins
 - The default Username is `admin`
 - Grab the default password 
@@ -64,9 +64,11 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 - `Skip` Plugin Installation; _We can do it later_
 - Change admin password
    - `Admin` > `Configure` > `Password`
+   
 - Configure `java` path
-  - `Manage Jenkins` > `Global Tool Configuration` > `JDK`  
-- Create another admin user id
+  - `Manage Jenkins` > `Global Tool Configuration` > `JDK` . `Add the NAME = JAVA_HOME  and the link
+  `# echo $JAVA_HOME    to get JAVA_HOME path
+ 
 
 ### Test Jenkins Jobs
 1. Create “new item”
@@ -77,4 +79,6 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. Save your job 
 1. Build job
 1. Check "console output"
+
+### CONGRATULATION FOR COMPLETING YOUR VERY FIRST JOB ON JENKINS
 
