@@ -9,6 +9,8 @@ Ansible is an open-source automation platform. It is very, very simple to set up
 ### Installation steps:
 #### on Amazon EC2 instance
 
+# Change hostname to control-node
+
 1. Install python and python-pip
    ```sh
    yum install python
@@ -20,15 +22,12 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    ansible --version
    ```
    
-1. Create a user called ansadmin (on Control node and Managed host)  
+1. Create a user called ansadmin (on Control node and Docker host)  
    ```sh
    useradd ansadmin
    passwd ansadmin
    ```
-1. Below command grant sudo access to ansadmin user. But we strongly recommended using "visudo" command if you are aware vi or nano editor.  (on Control node and Managed host)
-   ```sh
-   echo "ansadmin ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-   ```
+1. Give root privilege to ansadmin 
    
 1. Log in as a ansadmin user on master and generate ssh key (on Control node)
    ```sh 
@@ -37,7 +36,8 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    ```
 1. Copy keys onto all ansible managed hosts (on Control node)
    ```sh 
-   ssh-copy-id ansadmin@<target-server>
+   ssh-copy-id ansadmin@<target-server>  Target is docker-host
+   ssh-copy-id localhost
    ```
 
 1. Ansible server used to create images and store on docker registry. Hence install docker, start docker services and add ansadmin to the docker group. 
@@ -46,14 +46,17 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    
    # start docker services 
    service docker start
-   service docker start 
    
    # add user to docker group 
    usermod -aG docker ansadmin
-
+   go to /etc/ssh/sshd_config to allow password auth
    ```
 1. Create a directory /etc/ansible and create an inventory file called "hosts" add control node and managed hosts IP addresses to it. 
  
+ ```sh
+ ip-of-docker-host
+ localhost
+ ```
 ### Validation test
 
    
