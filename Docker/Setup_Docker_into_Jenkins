@@ -1,13 +1,21 @@
+### Pre-requisites
 
-### Install new plugins
-Go to Manage Jenkins > Manage Plugins and install "publish over ssh"
+1. Jenkins server 
+1. Docker-host Server 
 
-## Add our docker credentials
-```sh
-Go to manage Jenkins > Configure System  and go down to "Publish over SSH"
-click on Add SS server
-Name is anything
-Hostname is IP of docker server
-Username is dockeradmin
-add password  (Make sure to enable password anthentication in the /etc/ssh/sshd_config , PasswordAuthentication = yes)
-```
+### Integration between Docker-host and Jenkins
+
+Install "publish Over SSH"
+ - `Manage Jenkins` > `Manage Plugins` > `Available` > `Publish over SSH`
+
+Enable connection between Docker-host and Jenkins
+
+- `Manage Jenkins` > `Configure System` > `Publish Over SSH` > `SSH Servers` 
+
+	- SSH Servers:
+                - Name: `docker-host`
+		- Hostname:`<ServerIP>`
+		- username: `dockeradmin`
+               
+       -  `Advanced` > chose `Use password authentication, or use a different key`
+		 - password: `*******`
