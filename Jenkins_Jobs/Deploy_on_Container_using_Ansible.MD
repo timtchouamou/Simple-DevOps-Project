@@ -6,38 +6,10 @@
 1. Jenkins server 
 1. Docker-host server 
 1. Ansible server
-1. `Dockerfile` under *`/opt/docker`* on Ansible server **[Get Help Here]()**
-   ```sh 
-   # Pull tomcat latest image from dockerhub 
-   From tomcat
-   # Maintainer
-   MAINTAINER "AR Shankar" 
-
-   # copy war file on to container 
-   COPY ./webapp.war /usr/local/tomcat/webapps
-1. Create `create-docker-image.yml` unser *`/opt/docker`* on Ansible server **[Get Help Here]()**
-   ```sh
-   ---
-   - hosts: all
-     #ansadmin doesn't need root access to create an image
-     become: true 
-
-     tasks:
-     - name: building docker image
-       command: "docker build -t simple-devops-image ." 
-       args:
-         chdir: /opt/docker
-   ```
-1. Create `create-docker-image.yml` under *`/opt/docker`* on Ansible server **[Get Help Here]()**
-   ```ssh
-   ---
-   - hosts: all
-     become: ture
-
-     tasks:
-     - name: creating docker image using docker command
-       command: docker run -d --name simple-devops-container -p 8080:8080 simple-devops-image
-   ```
+   
+   *`/opt/docker`* will be our workplace to store artifacts so create if doesn't exist
+   chown ansadmin:ansadmin /opt/docker
+   
 
 ### Integration between Ansible-control-node and Jenkins
 
@@ -80,7 +52,8 @@ Enable connection between Ansible-control-node and Jenkins
 	       - Remote directory: `//opt//docker`
 	       - Exec command: 
                 ```sh 
-                ansible-playbook -i /opt/docker/hosts /opt/docker/create-docker-image.yml;
+                ansible-playbook -i /opt/docker/hosts /opt/docker/create-docker-image.yml;  
                 ```
+Test first without any exec command
 
 Save and run the job now.
