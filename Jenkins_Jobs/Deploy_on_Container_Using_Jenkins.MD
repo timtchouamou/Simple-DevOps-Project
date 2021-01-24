@@ -4,16 +4,17 @@
 ### Pre-requisites
 
 1. Jenkins server 
-1. Docker-host server 
-1. `Dockerfile` under *`/home/dockeradmin`* in user home directory on docker host 
+2. Docker-host server 
+3. `Dockerfile` under *`/home/dockeradmin`* in user home directory on docker host 
    ```sh 
    # Pull tomcat latest image from dockerhub 
    From tomcat
    # Maintainer
-   MAINTAINER "AR Shankar" 
+   MAINTAINER "ItResolveIt" 
 
    # copy war file on to container 
    COPY ./webapp.war /usr/local/tomcat/webapps
+   
 ### Integration between Docker-host and Jenkins
 
 Install "publish Over SSH"
@@ -37,9 +38,9 @@ Enable connection between Docker-host and Jenkins
      - Copy from: `Deploy_on_Docker_Host`
      
    - *Source Code Management:*
-      - Repository: `https://github.com/yankils/hello-world.git`
+      - Repository: `https://github.com/itresolve/hello-world.git`
       - Branches to build : `*/master`  
-   - *Poll SCM* :      - `* * * *`
+ 
 
    - *Build:*
      - Root POM:`pom.xml`
@@ -52,12 +53,16 @@ Enable connection between Docker-host and Jenkins
        - `Transfers` >  `Transfer set`
             - Source files: `webapp/target/*.war`
 	       - Remove prefix: `webapp/target`
-	       - Remote directory: `//home//ansadmin` or `.`
+	       - Remote directory: `.`
 	       - Exec command: 
                 ```sh 
                 cd /home/dockeradmin;
-                docker build -t simple-devops-image .; 
-                docker run -d --name simple-devops-container -p 8080:8080 simple-devops-image;
+                docker build -t devops-image .; 
+                docker run -d --name devops-container -p 8080:8080 devops-image;
                 ```
+		
+Build the job and make sure first you don't have any container running with that name
 
+### If you try to rebuilt a new code it will fail AND this is what we will solve next with Ansible.
+### Also asume your are deploying on multiple system, you must registe each system to jenkins which is a lot to do, ANSIBLE make it easy
 Save and run the job now.
