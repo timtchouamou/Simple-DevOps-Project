@@ -51,9 +51,7 @@ Enable connection between Ansible-control-node and Jenkins
 	       - Remove prefix: `webapp/target`
 	       - Remote directory: `//opt//docker`
 	       - Exec command: 
-                ```sh 
-                ansible-playbook -i /opt/docker/hosts /opt/docker/create-docker-image.yml;  
-                ```
+                
 Test first without any exec command
 
 Save and run the job now.
