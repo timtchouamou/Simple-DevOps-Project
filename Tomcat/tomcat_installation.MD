@@ -14,7 +14,9 @@ yum install -y java-1.8*
    tar -xvzf /opt/apache-tomcat-9.0.41.tar.gz
    ```
    mv apache-tomcat-9.0.41 tomcat
+   
    cd tomcat/bin
+ 
    ./startup.sh     #To start tomcat
    ```
    
