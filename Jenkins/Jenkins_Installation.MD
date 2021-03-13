@@ -45,6 +45,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
    yum -y install jenkins
+   line 45&46 configure the Jenkins repository
    ```
 
    ### Start Jenkins and Setup Jenkins to start at boot
