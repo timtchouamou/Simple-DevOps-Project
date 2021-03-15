@@ -10,7 +10,7 @@
    COPY ./webapp.war /usr/local/tomcat/webapps
    
    
-1. Create `simple-devops-image.yml` unser *`/opt/docker`* on Ansible server 
+1. Create `simple-devops-image.yml` under *`/opt/docker`* on Ansible server 
    ```sh
    ---
    - hosts: all
