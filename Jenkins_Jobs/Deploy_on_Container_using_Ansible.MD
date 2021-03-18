@@ -7,7 +7,7 @@
 1. Docker-host server 
 1. Ansible server
    
-   *`/opt/docker`* will be our workplace to store artifacts to create if doesn't exist
+   *`/opt/docker`* will be our workplace to store artifacts, so create if doesn't exist
    chown ansadmin:ansadmin /opt/docker
    
 
