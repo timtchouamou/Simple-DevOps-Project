@@ -6,10 +6,9 @@
 1. Jenkins server 
 1. Docker-host server 
 1. Ansible server
-   
-   *`/opt/docker`* will be our workplace to store artifacts, so create if doesn't exist
+
+*`/opt/docker`* will be our workplace to store artifacts, so create if doesn't exist
    chown ansadmin:ansadmin /opt/docker
-   
 
 ### Integration between Ansible-control-node and Jenkins
 
@@ -27,6 +26,7 @@ Enable connection between Ansible-control-node and Jenkins
                
        -  `Advanced` > chose `Use password authentication, or use a different key`
 		 - password: `*******`
+   
  
 ### Steps to create "Deploy_on_Container_using_ansible" Jenkin job
 #### From Jenkins home page select "New Item"
