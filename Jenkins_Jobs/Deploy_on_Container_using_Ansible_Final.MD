@@ -4,7 +4,7 @@
    # Pull tomcat latest image from dockerhub 
    From tomcat
    # Maintainer
-   MAINTAINER "ItResolveIt" 
+   MAINTAINER "tim tchouamou" 
 
    # copy war file on to container 
    COPY ./webapp.war /usr/local/tomcat/webapps
