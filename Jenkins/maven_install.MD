@@ -23,7 +23,7 @@ Maven is a code build tool which used to convert your code to an artifact. this 
    M2=/opt/maven/bin
    PATH=<Existing_PATH>:$M2_HOME:$M2
    ```
-#### Checkpoint 
+### Checkpoint 
 1. Verify path and check maven version
    ``` sh
     source ~/bash_profile
