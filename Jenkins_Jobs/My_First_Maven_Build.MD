@@ -13,7 +13,7 @@ We know how to use work with each and Git, Jenkins independently. What if you wa
 1. Login to Jenkins console
 1. Create *Jenkins job*, Fill the following details,
    - *Source Code Management:* Select Git   and no credential because it's public repo
-      - Repository: `https://github.com/itresolve/hello-world.git`  
+      - Repository: git@github.com:timtchouamou/hello-world.git  
       - Branches to build : `*/master`  
    - *Build:*
      - Root POM:`pom.xml`
