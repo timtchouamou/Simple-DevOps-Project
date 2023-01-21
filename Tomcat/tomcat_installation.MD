@@ -10,10 +10,10 @@ yum install -y java-11*
    Change hpstname to tomcat
    # Create tomcat directory
    cd /opt
-   wget https://mirrors.sonic.net/apache/tomcat/tomcat-9/v9.0.41/bin/apache-tomcat-9.0.41.tar.gz
-   tar -xvzf /opt/apache-tomcat-9.0.41.tar.gz
+   wget https://mirrors.sonic.net/apache/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
+   tar -xvzf /opt/apache-tomcat-9.0.71.tar.gz
    ```
-   mv apache-tomcat-9.0.41 tomcat
+   mv apache-tomcat-9.0.71 tomcat
    
    cd tomcat/bin
  
