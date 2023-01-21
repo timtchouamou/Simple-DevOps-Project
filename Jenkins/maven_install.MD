@@ -26,7 +26,7 @@ Maven is a code build tool which used to convert your code to an artifact. this 
 ### Checkpoint 
 1. Verify path and check maven version
    ``` sh
-    source ~/bash_profile
+    source ~/.bash_profile
     echo $M2
     echo $M2_HOME
     mvn --version
