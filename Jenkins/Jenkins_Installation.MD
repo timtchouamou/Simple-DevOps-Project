@@ -18,9 +18,9 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. Confirm Java Version and set the java home
    ```sh
    java -version
-   find /usr/lib/jvm/java-1.8* | head -n 3   ## to get java version
+   find /usr/lib/jvm/java-11* | head -n 3   ## to get java version
    vi ~/.bash_profile   ## to update the below permanently to you path
-   JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.amzn2.0.1.x86_64     <Java version which seen in the above output>
+   JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64     <Java version which seen in the above output>
    M2_HOME=/opt/maven
    M2=/opt/maven/bin
    PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
@@ -32,9 +32,9 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    Verify java is installed well, The output should be something like below.
    
    [root@jenkins ~]# java -version
-   openjdk version "1.8.0_272"
-   openJDK Runtime Environment (build 1.8.0_272-b10)
-   openJDK 64-Bit Server VM (build 25.272-b10, mixed mode)
+  openjdk version "11.0.18" 2023-01-17 LTS
+OpenJDK Runtime Environment Corretto-11.0.18.10.1 (build 11.0.18+10-LTS)
+OpenJDK 64-Bit Server VM Corretto-11.0.18.10.1 (build 11.0.18+10-LTS, mixed mode)
    ```
 
 ## Install Jenkins
