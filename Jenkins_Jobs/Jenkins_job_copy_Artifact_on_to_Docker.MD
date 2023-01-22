@@ -6,6 +6,9 @@
 1. Jenkins server 
 2. Docker-host Server 
 3. Integration between Docker-host and Jenkins done
+### First integrate with docker jinkins
+Go to Jenkins console and install the plugin “ Publish over SSH”
+Go to manage Jenkins  configure system, go down to publish over ssh and click on add ( provide the name, hostname or IP, username is dockeradmin and for password check password auth box to enter password
 
 ### First integrate Docker with Jenkins
 Go to Jenkins console and install the plugin “Publish Over SSH”
