@@ -13,7 +13,7 @@ We know how to work with Git and Jenkins independently. What if you want to coll
 1. Login to Jenkins console
 1. Create *Jenkins job*, Fill the following details,
    - *Source Code Management:* Select Git   and no credential because it's public repo
-      - Repository: https://github.com/timtchouamou/Simple-DevOps-Project.git  
+      - Repository: https://github.com/timtchouamou/hello-world.git 
       - Branches to build : `*/master`  
    - *Build:*
      - Root POM:`pom.xml`
