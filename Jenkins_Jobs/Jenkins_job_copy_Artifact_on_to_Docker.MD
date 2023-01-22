@@ -20,7 +20,7 @@ Go to Manage Jenkins --- configure system, go down to publish over ssh and click
    - *Source Code Management:*
       - Repository: `https://github.com/itresolve/hello-world.git`
       - Branches to build : `*/master`  
-   - *Poll SCM* :      - `* * * *`
+   - *Poll SCM* :      * * * * *`
 
 *Disable POLL SCM*
 *Delete deploy to container*
