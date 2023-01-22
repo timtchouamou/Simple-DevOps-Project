@@ -1,7 +1,7 @@
 # Create a First Maven Jenkins job to build hello-world project 
 # *Jenkins Job name:* `My_First_Maven_Build`
 
-We know how to use work with each and Git, Jenkins independently. What if you want to collaborate these two? that is where Simple DevOps project helps you. Follow the below steps if you are a new guy to DevOps. You love it. 
+We know how to work with Git and Jenkins independently. What if you want to collaborate these two? that is where Simple DevOps project helps you. Follow the below steps if you are a new guy to DevOps. You love it. 
 
 
 #### Pre-requisites
