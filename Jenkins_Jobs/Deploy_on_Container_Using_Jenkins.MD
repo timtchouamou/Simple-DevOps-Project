@@ -8,9 +8,9 @@
 3. `Dockerfile` under *`/home/dockeradmin`* in user home directory on docker host 
    ```sh 
    # Pull tomcat latest image from dockerhub 
-   From tomcat
+   From tomcat: 9
    # Maintainer
-   MAINTAINER "ItResolveIt" 
+   MAINTAINER "Tim tchouamou" 
 
    # copy war file on to container 
    COPY ./webapp.war /usr/local/tomcat/webapps
