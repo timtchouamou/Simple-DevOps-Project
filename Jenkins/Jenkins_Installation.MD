@@ -20,7 +20,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    java -version
    find /usr/lib/jvm/java-11* | head -n 3   ## to get java version
    vi ~/.bash_profile   ## to update the below permanently to you path
-   JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64     <Java version which seen in the above output>
+   JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64    <Java version which seen in the above output>
    M2_HOME=/opt/maven
    M2=/opt/maven/bin
    PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
