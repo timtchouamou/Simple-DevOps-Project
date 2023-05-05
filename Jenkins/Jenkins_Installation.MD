@@ -12,7 +12,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. We will be using open java for our demo, Get the latest version from http://openjdk.java.net/install/
    ```sh
    yum install java-11* -y
-  NB: Because of some update jenjins does not support no more less than version 11
+  NB: Because of some update jenkins does not support no more less than version 11
    ```
 
 1. Confirm Java Version and set the java home
