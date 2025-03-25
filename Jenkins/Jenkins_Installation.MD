@@ -11,7 +11,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 ## Install Java
 1. We will be using open java for our demo, Get the latest version from http://openjdk.java.net/install/
    ```sh
-   yum install java-11* -y
+   yum install java-11* -y or java 17*
   NB: Because of some update jenkins does not support no more less than version 11
    ```
 
@@ -42,8 +42,8 @@ OpenJDK 64-Bit Server VM Corretto-11.0.18.10.1 (build 11.0.18+10-LTS, mixed mode
 1. Get the latest version of jenkins from https://pkg.jenkins.io/redhat-stable/ and install
    ```sh
    yum -y install wget
-   a) sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-   b) sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   a) sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat/jenkins.repo
+   b) sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io-2023.key
    yum -y install jenkins
    line a$b configure the Jenkins repository
    ```
