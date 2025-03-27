@@ -26,6 +26,8 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
    
    [root@jenkins ~]# source ~/.bash_profile
+
+NB: the command sudo update-alternatives --config java will return different version of java installed
    
    
    ```
