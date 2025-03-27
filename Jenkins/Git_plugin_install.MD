@@ -6,15 +6,15 @@ Git is one of the most popular tools for version control system. you can pull co
 1. Jenkins server 
 
 #### Install Git on Jenkins server
-1. Install git packages on jenkins server
+2. Install git packages on jenkins server
    ```sh
    yum install git -y
    ```
 
 #### Setup Git on jenkins console
-- Install git plugin without restart  
+-3 Install git plugin without restart  
   - `Manage Jenkins` > `Manage Plugins` > `available` > `then search for "github"`
 
-- Configure git path
+-4 Configure git path
   - `Manage Jenkins` > `Global Tool Configuration` > `git` > `and change NAME from default to github  and path from git to /usr/bin/git
 
