@@ -1,5 +1,5 @@
 #  Install & configure Maven build tool on Jenkins
-Maven is a code build tool which used to convert your code to an artifact. this is a widely used plugin to build in continuous integration
+Maven is a code build tool which is used to convert your code to an artifact. this is a widely used plugin to build in continuous integration
 
 
 #### Prerequisites
@@ -10,10 +10,10 @@ Maven is a code build tool which used to convert your code to an artifact. this 
  - Link : https://maven.apache.org/download.cgi
     ```sh
      cd /opt
-     # downloading maven version 3.8.7  and uncompress
-     wget https://mirror.jframeworks.com/apache/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz
-     tar -xvzf apache-maven-3.8.7-bin.tar.gz
-     mv apache-maven-3.8.7 maven
+     # downloading maven version 3.9.9  and uncompress
+     wget https://mirror.jframeworks.com/apache/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+     tar -xvzf apache-maven-3.9.9-bin.tar.gz
+     mv apache-maven-3.9.9 maven
      ```
 	
 1. Setup M2_HOME and M2 paths in .bash_profile of the user and add these to the path variable
@@ -35,9 +35,9 @@ So far we have completed the installation of maven software to support maven plu
 
 ### Setup maven on Jenkins console
 1. Install maven plugin without restart  
-  - `Manage Jenkins` > `Manage Plugins` > `available` > `Maven Invoker`
-  - `Manage Jenkins` > `Manage Plugins` > `available` > `Maven Integration`
+  - `Manage Jenkins` > `Plugins` > `available` > `Maven Invoker`
+  - `Manage Jenkins` > `Plugins` > `available` > `Maven Integration`
 
 2. Configure maven path
-  - `Manage Jenkins` > `Global Tool Configuration` > `Maven` --> `NAME is M2_HOME    MAVEN HOME is /opt/maven
+  - `Manage Jenkins` > `Tool` > `Maven` --> `NAME is M2_HOME    MAVEN HOME is /opt/maven
 
