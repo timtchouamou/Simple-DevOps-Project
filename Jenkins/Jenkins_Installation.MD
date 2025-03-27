@@ -71,7 +71,7 @@ OpenJDK 64-Bit Server VM Corretto-11.0.18.10.1 (build 11.0.18+10-LTS, mixed mode
    - `Admin` > `Configure` > `Password`
    
 - Configure `java` path
-  - `Manage Jenkins` > `Global Tool Configuration` > `JDK` . `Add the NAME = JAVA_HOME  and the link
+  - `Manage Jenkins` > `Tools` > `Add JDK` . `Add the NAME = JAVA_HOME  and the link
   `# echo $JAVA_HOME    to get JAVA_HOME path
  
 
@@ -84,6 +84,7 @@ OpenJDK 64-Bit Server VM Corretto-11.0.18.10.1 (build 11.0.18+10-LTS, mixed mode
 1. Save your job 
 1. Build job
 1. Check "console output"
+NB: the "My-First-Project" should be in /var/lib/jenkins/workspace and this is to verify that jenskins is working good!
 
 ### CONGRATULATION FOR COMPLETING YOUR VERY FIRST JOB ON JENKINS
 
