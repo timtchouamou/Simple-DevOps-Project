@@ -10,8 +10,8 @@ yum install -y java-11*
    Change hpstname to tomcat
    # Create tomcat directory
    cd /opt
-   wget https://mirrors.sonic.net/apache/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
-   tar -xvzf /opt/apache-tomcat-9.0.71.tar.gz
+   wget https://mirrors.sonic.net/apache/tomcat/tomcat-9/v9.0.100/bin//apache-tomcat-9.0.100.tar.gz
+   tar -xvzf /opt/apache-tomcat-9.0.100.tar.gz
    ```
    mv apache-tomcat-9.0.71 tomcat
    
@@ -37,14 +37,14 @@ access tomcat application from browser on port 8080
 Access tomcat application from browser on port 8090  
  - http://<Public_IP>:8080
 
-1. Tomcat application doesnt allow to login from browser. changing a default parameter in context.xml does address this issue  (Try to click on "manage app" from the browser)
+1. Tomcat application doesnt allow to login from browser. changing a default parameter in context.xml will fix that issue  (Try to click on "manage app" from the browser)
    ```sh
    #search for context.xml
    find / -name context.xml      Then edit the following files
    /opt/tomcat/webapps/host-manager/META-INF/context.xml
    /opt/tomcat/webapps/manager/META-INF/context.xml
    ```
-1. above command gives 3 context.xml files. comment `(<!-- & -->)` `Value ClassName` field on files which are under webapp directory.
+1. above command gives 2 context.xml files. with manager and host-manager,  comment `(<!-- & -->)` `Value ClassName` field on files which are under webapp directory.
 As follow
 ```
  <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
