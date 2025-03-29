@@ -11,7 +11,7 @@
 1. Install 'deploy to container' plugin. This plugin needs to be deploy on Jenkins server. 
 
   - Install 'deploy to container' plugin without restart  
-    - `Manage Jenkins` > `Jenkins Plugins` > `available` > `deploy to container`
+    - `Manage Jenkins` > `Plugins` > `available` > `deploy to container`
  
 2. Jenkins should need access to the tomcat server to deploy build artifacts. setup credentials to enable this process. use credentials option on Jenkins home page.
 
@@ -21,7 +21,7 @@
      - Copy From : My_First_Maven_Build
      
    - *Source Code Management:*
-      - Repository: `https://github.com/yankils/hello-world.git`
+      - Repository: `https://github.com/timtchouamou/hello-world.git`
       - Branches to build : `*/master`  
    - *Poll SCM* :      - `* * * *`
 
@@ -38,7 +38,7 @@
                Password : `1qaz2wsx`
                id      :  `deployer-user`
                Description: `user to deploy on tomcat vm`
-         - Tomcat URL : `http://<PUBLIC_IP>:8080`
+         - Tomcat URL : `http://<PUBLIC_IP>:8090`
 
 ### Apply and Save, run the job now.
 verify 
