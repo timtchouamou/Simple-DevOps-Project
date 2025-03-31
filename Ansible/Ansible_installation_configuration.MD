@@ -4,7 +4,7 @@ Ansible is an open-source automation platform. It is very, very simple to set up
 
 ### Pre-requisites install python and python-pip
 
-1. An AWS EC2 instance (on Control node)
+1. An AWS EC2 instance  on Centos 9 server(on Control node)
 
 ### Installation steps:
 #### on Amazon EC2 instance
@@ -19,6 +19,9 @@ hostnamectl set-hosname ansible
     ```sh
    amazon-linux-extras install ansible2
    ansible --version
+NB: on Centos 9 do
+sudo yum install epel-release
+sudo yum install ansible
    ```
    
 1. Create a user called ansadmin (on Control node and Docker host)  
