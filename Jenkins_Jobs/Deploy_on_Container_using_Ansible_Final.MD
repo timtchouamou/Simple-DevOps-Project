@@ -10,7 +10,7 @@
    COPY ./webapp.war /usr/local/tomcat/webapps
    
    
-1. Create `simple-devops-image.yml` under *`/opt/docker`* on Ansible server 
+1. Create `tomcat-image.yml` under *`/opt/docker`* on Ansible server 
    ```sh
    ---
    - hosts: all
@@ -19,7 +19,7 @@
 
      tasks:
      - name: building docker image using war file
-       command: "docker build -t simple-devops-image ." 
+       command: "docker build -t tomcat-image ." 
        args:
          chdir: /opt/docker
    ```
@@ -34,7 +34,7 @@
      
      tasks:
      - name: creating docker container using docker command
-       command: docker run -d --name simple-devops-container -p 8080:8080 simple-devops-image
+       command: docker run -d --name tomcat-container -p 8090:8080 tomcat-image
    ```
    
    TEST TO MAKE SURE IT WORKS AGAIN
