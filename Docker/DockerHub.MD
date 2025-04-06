@@ -21,12 +21,16 @@ Docker Hub is a cloud-based registry service which allows you to link to code re
 1. create a custom tag to the docker image
    ```sh
    docker tag ubuntu:latest sfoadieng/ubuntu:demo
+
+NB: docker/podman tag repository_name docker_accoount_name/repository_name:new_tag_name
    ```
 
 1. login to your docker hub registry 
    ```sh
    docker login
    docker push sfoadieng/ubuntu:demo
+
+NB: docker/podman push docker_accoount_name/repository_name:new_tag_name
    ```
 
 ### testing 
