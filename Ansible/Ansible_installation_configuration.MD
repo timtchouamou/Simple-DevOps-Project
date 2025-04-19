@@ -31,7 +31,7 @@ sudo yum install ansible
    ```
 1. Give root privilege to ansadmin 
 
-usermod -aG weel ansadmin and edit visudo to ## Same thing without a password
+usermod -aG wheel ansadmin and edit visudo to ## Same thing without a password
  %wheel ALL=(ALL)       NOPASSWD: ALL
    
 1. Log in as a ansadmin user on master and generate ssh key (on Control node)
